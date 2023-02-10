@@ -540,7 +540,18 @@ var articleIds = [
     118245316,
     118215690];
 
+function sleep(time) {
+    var timeStamp = new Date().getTime();
+    var endTime = timeStamp + time;
+    while (true) {
+        if (new Date().getTime() > endTime) {
+            return;
+        }
+    }
+}
+
 for (let i = 0; i < articleIds.length; i++) {
     var url = 'https://blog.csdn.net/universsky2015/article/details/' + articleIds[i];
-    open(url, '_blank');
+    open(url, '_self');
+    sleep(Math.floor(Math.random() * 2000 + 1000)); //输出1000～3000之间的随机整数
 }
