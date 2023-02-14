@@ -1,5 +1,5 @@
 var items = document.getElementsByClassName('recommendation-btn');
 
-for (var i = 0; i < items.length - 1; i++) {
+for (var i = 0; i < items.length; i++) {
     items[i].click();
 }
