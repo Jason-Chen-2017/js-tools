@@ -80,6 +80,47 @@ var articleIds = [
     129198420,
     129197907,
     129210816,
+    126595625,
+    116423575,
+    113706328,
+    108737478,
+    107877328,
+    102397412,
+    129281009,
+    129288813,
+    129273425,
+    129273410,
+    129273406,
+    129273125,
+    129253339,
+    129242704,
+    129253075,
+    129234310,
+    129234293,
+    129226245,
+    129226049,
+    129225942,
+    129225807,
+    129225763,
+    129225502,
+    129234070,
+    129234084,
+    129222867,
+    129222858,
+    129222853,
+    129222804,
+    129220739,
+    129215765,
+    129215651,
+    129215448,
+    129215372,
+    129215353,
+    129215324,
+    129215296,
+    129214892,
+    129214844,
+    129214799,
+
 ];
 
 function sleep(time) {
@@ -92,8 +133,15 @@ function sleep(time) {
     }
 }
 
-for (let i = 0; i < articleIds.length; i++) {
-    var url = 'https://blog.csdn.net/universsky2015/article/details/' + articleIds[i];
+let N = articleIds.length - 1;
+
+while (true) {
+    let randomIndex = Math.floor(Math.random() * N); // 取整
+    // console.log(randomIndex);
+    let articleId = articleIds[randomIndex];
+    console.log(articleId);
+
+    var url = 'https://blog.csdn.net/universsky2015/article/details/' + articleId;
     open(url, '_self');
     sleep(Math.floor(Math.random() * 2000 + 1000)); //输出1000～3000之间的随机整数
 }
