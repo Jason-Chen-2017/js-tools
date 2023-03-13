@@ -1,0 +1,890 @@
+<div id="content">
+	  <a name="top" id="contentTop"></a>
+	  	  <!--<h1 class="firstHeading">第一性原理</h1>-->
+	  <div class="firstHeading-wrap">
+            <h1 class="firstHeading">第一性原理</h1>
+                        <div class="code-lay visualClear">
+               <div id="qrcode_wiki" style="cursor:pointer">
+                <span class="code-icon"></span>
+                <span class="txt">用手机看条目</span>
+                </div>
+                <div class="app-guide-box" style="display:none">
+                	 <span id="wx-img">
+                     
+                     </span>
+                     <span class="app-guide-txt" style="border-bottom:0px;padding-bottom:0px;">扫一扫，手机看条目</span>
+                     <!--<a target="_blank" href="https://www.mbalib.com/apps/mbalib/?from_source=wiki_qrcode" class="app-guide-btn" title="下载APP，还能边看边听">下载APP，还能边看边听</a>-->
+                </div>
+            </div>
+                        <script src="https://img.mbalib.com/common/jquery/jquery.qrcode.min.js"></script>
+            <script>
+            (function(){
+                var created = 0;
+                var t;
+				if(location.hash)
+				{
+					var m = location.hash.substring(1);
+					if(m == 'from_qrcode')
+					{
+						if(typeof stateWikiVisitQrcode === 'function' )
+							stateWikiVisitQrcode();
+					}
+				}
+
+				function createQrcode(url)
+				{
+					if(created == 0)
+					{
+						$("#wx-img").html('');
+		                $("#wx-img").qrcode({
+		                    //render: "table", //table方式
+		                    width: 200, //宽度
+		                    height:200, //高度
+		                    text: url //任意内容
+		                });
+		                if(typeof stateWikiShowQrcode === 'function' )
+		                	stateWikiShowQrcode();
+		                created = 1;
+					}
+				}
+                
+                $("#qrcode_wiki").mouseover(function(){
+                	clearTimeout(t);
+
+                	var url = window.location.href;
+                	var url2 = 'https://www.mbalib.com/app/download?from_source=wiki_qrcode';
+                	var pattern = /^(http|https):\/\/wiki\.(test\.|dev\.)?mbalib\.com\/wiki\/([^?#]*)/i;
+                	var d = pattern.exec(url);
+                	var key = d[3];
+                	url = url2 + '&key=' + key;
+                	
+	                //url = url + '#from_qrcode';
+	                if(false && url.length > 100)//create short url 2018.10.16不使用短链了，APP扫码不支持短链
+	                {
+		                if(created == 0)
+		                {
+			                $.post('https://ke.mbalib.com/api/shorturl',{url:url},function(result){
+				                if(result.url)
+				                {
+					                url = result.url;
+					            }
+				                createQrcode(url);
+				                $(".app-guide-box").show();
+				            },'json');
+		                }else
+		                {
+			                $(".app-guide-box").show();
+			            }
+		            }else
+		            {
+	                	createQrcode(url);
+		                $(".app-guide-box").show();
+		            }
+                }),$("#qrcode_wiki").mouseout(function(){
+                	t=setTimeout('$(".app-guide-box").hide();',500);
+                });
+
+                $(".app-guide-box").mouseover(function(){
+                	clearTimeout(t);
+                  }),$(".app-guide-box").mouseout(function(){
+                      t=setTimeout('$(".app-guide-box").hide();',500);
+                });
+            })();
+            </script>
+      </div>
+      <div style="clear:both;"></div>
+	  <div id="bodyContent" class="main_content">
+	    <h3 id="siteSub">出自 MBA智库百科(<a href="//wiki.mbalib.com/">https://wiki.mbalib.com/</a>)</h3>
+	    <div id="contentSub"></div>
+	    	    	    <!-- start content -->
+	    <p><b>第一性原理（First principle thinking）</b>
+</p>
+<table id="toc" class="toc" summary="目录"><tbody><tr><td><div id="toctitle"><h2>目录</h2> <span class="toctoggle">[<a id="togglelink" class="internal" href="javascript:toggleToc()">隐藏</a>]</span></div>
+<ul>
+<li class="toclevel-1"><a href="#.E4.BB.80.E4.B9.88.E6.98.AF.E7.AC.AC.E4.B8.80.E6.80.A7.E5.8E.9F.E7.90.86"><span class="tocnumber">1</span> <span class="toctext">什么是第一性原理</span></a></li>
+<li class="toclevel-1"><a href="#.E5.A6.82.E4.BD.95.E8.BF.90.E7.94.A8.E7.AC.AC.E4.B8.80.E6.80.A7.E5.8E.9F.E7.90.86"><span class="tocnumber">2</span> <span class="toctext">如何运用第一性原理</span></a></li>
+<li class="toclevel-1"><a href="#.E7.AC.AC.E4.B8.80.E6.80.A7.E5.8E.9F.E7.90.86.E6.80.9D.E8.80.83.E4.B8.BE.E4.BE.8B"><span class="tocnumber">3</span> <span class="toctext">第一性原理思考举例</span></a></li>
+</ul>
+</td></tr></tbody></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=edit&amp;section=1" title="编辑段落: 什么是第一性原理">编辑</a>]</div><!--MWPAGE-1--><div class="headline-2"><a class="headline" name=".E4.BB.80.E4.B9.88.E6.98.AF.E7.AC.AC.E4.B8.80.E6.80.A7.E5.8E.9F.E7.90.86"></a><h2> 什么是第一性原理 </h2></div>
+<p>　　<b>第一性原理</b>指的是，回归事物最基本的条件，将其拆分成各要素进行解构分析，从而找到实现目标最优路径的方法。
+</p><p>　　该原理源于古希腊哲学家<a href="/wiki/%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7" title="亚里士多德">亚里士多德</a>提出的一个哲学观点：“每个系统中存在一个最基本的命题，它不能被违背或删除。”
+</p><p>　　这个名词被炒的很火主要得益于“钢铁侠”<a href="/wiki/%E5%9F%83%E9%9A%86%C2%B7%E9%A9%AC%E6%96%AF%E5%85%8B" title="埃隆·马斯克">埃隆·马斯克</a>（<a href="/wiki/%E7%89%B9%E6%96%AF%E6%8B%89" title="特斯拉">特斯拉</a>汽车<a href="/wiki/CEO" title="CEO">CEO</a>）。他曾在采访中提到自己特别推崇“第一性原理”思考法：“通过第一性原理，我把事情升华到最根本的真理，然后从最核心处开始<a href="/wiki/%E6%8E%A8%E7%90%86" title="推理">推理</a>……”
+</p><p>　　“我们运用第一性原理，而不是比较思维去思考问题是非常重要的。我们在生活中总是倾向于比较，对别人已经做过或者正在做的事情我们也都去做，这样发展的结果只能产生细小的迭代发展。第一性原理的思想方式是用物理学的角度看待世界，也就是说一层层拨开事物表象，看到里面的本质，再从本质一层层往上走。”这是他眼中的“第一性原理思维模型”——回溯事物的本质，重新思考怎么做。
+</p><p>　　十几年前，传统锂电池组价格曾长期居高不下，这很大程度影响了<a href="/wiki/%E7%89%B9%E6%96%AF%E6%8B%89" title="特斯拉">特斯拉</a>电动车的大众化之路。于是，创始人马斯克回归电池组的最基本要素,思考电池组是由哪些材料组成的?这些原料的市场价格是多少?结果他发现，如果从<a href="/wiki/%E4%BC%A6%E6%95%A6%E9%87%91%E5%B1%9E%E4%BA%A4%E6%98%93%E6%89%80" title="伦敦金属交易所">伦敦金属交易所</a>购买电池组所需的碳、镍、铝等<a href="/wiki/%E5%8E%9F%E6%9D%90%E6%96%99" title="原材料">原材料</a>，再由特斯拉自己建厂研发制造，而不是直接购买<a href="/wiki/%E4%BE%9B%E5%BA%94%E9%93%BE" title="供应链">供应链</a>产品，电池投产之后的价格可以下降30%。
+</p><p>　　马斯克的这种思维就是运用了“第一性原理”，并且他非常推崇使用该原理解决问题，这使他在<a href="/wiki/%E7%94%B5%E5%8A%A8%E6%B1%BD%E8%BD%A6" title="电动汽车">电动汽车</a>、航空航天、<a href="/wiki/%E6%B8%85%E6%B4%81%E8%83%BD%E6%BA%90" title="清洁能源">清洁能源</a>等领域都取得了一些颠覆性的创新。
+　　
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=edit&amp;section=2" title="编辑段落: 如何运用第一性原理">编辑</a>]</div><!--MWPAGE-2--><div class="headline-2"><a class="headline" name=".E5.A6.82.E4.BD.95.E8.BF.90.E7.94.A8.E7.AC.AC.E4.B8.80.E6.80.A7.E5.8E.9F.E7.90.86"></a><h2> 如何运用第一性原理 </h2></div>
+<p>　　<b>第一，以最本质最基础的无法改变的条件作为出发点。</b>
+</p><p>　　如果不是从事物最基本的条件出发，那么拆分出的要素很可能发挥不了作用。同样是为了解决电动车锂电池组成本过高的问题，如果马斯克把作为出发点的基础条件放在供应商身上，试图说服供应商降价，不仅可能吃闭门羹，甚至可能让双方的关系紧张。更可行的思路是解决电池的原料问题，因为电池的原材料是相对固定的，这才是最基础的出发点。
+</p><p>　　<b>第二，推演过程需要有严密的逻辑关系，尽量少引入估计。</b>
+</p><p>　　之所以说运用第一性原理会消耗更高的认知能量，正是因为整个推演分析的过程必须保证合理可靠，否则就可能失之毫厘，谬以千里。整个过程就变成了做无用功。当然，这需要丰富的知识储备、生活经验和思维训练作为支撑。
+</p><p>　　<b>第三，不可随意参照同类方案或现有经验，尊重客观推演结果。</b>
+</p><p>　　要做好“找准出发点”和“保证逻辑关系”这两点，最重要的就是学会保持“空杯心态”，在推演分析时屏蔽现有的、已知的各种因素的干扰。没有了参照，有时可能会产生看似天马行空的想法。如果出发点和逻辑关系都没有问题，那么就应该尊重客观推演的结果，也许这就是一个蕴含着巨大价值的天才想法。
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=edit&amp;section=3" title="编辑段落: 第一性原理思考举例">编辑</a>]</div><!--MWPAGE-3--><div class="headline-2"><a class="headline" name=".E7.AC.AC.E4.B8.80.E6.80.A7.E5.8E.9F.E7.90.86.E6.80.9D.E8.80.83.E4.B8.BE.E4.BE.8B"></a><h2> 第一性原理思考举例 </h2></div>
+<p>　　<b>1.键盘鼠标是我们的真实需求吗？</b>
+</p><p>　　我们使用键盘鼠标的本质目的是什么——向电脑输入指令和信息。为啥要用键盘鼠标，因为技术限制，我们只能通过这样的方式向电脑输入指令和信息。但是，如果我们的大脑能够直接与电脑交互，那我们就不需要键盘鼠标了。可是我们长时间以来习惯了用键盘和鼠标，所以在大多数人的认知中，电脑就应该长成那样，有屏幕，有键盘，有鼠标，或者触摸屏。大部分人固化了这个认知，但伊隆·马斯克却用批判性思维和怀疑的精神拷问这个认知，于是有了他的另一个项目——neuralink（脑机融合）
+</p><p>　　<b>2.“便利的获取内容”更重要</b>
+</p><p>　　20世纪80年代，<a href="/wiki/%E4%BA%92%E8%81%94%E7%BD%91" title="互联网">互联网</a>诞生早期，多数<a href="/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E4%BC%81%E4%B8%9A" title="互联网企业">互联网企业</a>都倾力于为网民提供各种网站内容，80后应该有印象，我们一上网就登录搜狐、新浪之类的门户网站。
+</p><p>　　但远比门户时代更早的十多年前，就有两个年轻人认为：比起内容本身，如何让用户“便利的获取内容”更重要，这将产生万亿美元级的<a href="/wiki/%E5%B8%82%E5%9C%BA%E6%BD%9C%E5%8A%9B" title="市场潜力">市场潜力</a>。那个年代，网民总量少、互联网上内容稀少、许多服务还是付费，如果这两个年轻人对外宣扬这种想法，公众只会嗤之以鼻，没人会认为他们高瞻远瞩。
+</p><p>　　但历史证明，少数人的观点多半是对的。这两个年轻人是布林和佩奇，<a href="/wiki/Google" title="Google">Google</a>创始人。他们对互联网产业的核心洞察：“便利、免费”贯穿了Google从创立到强盛的整个历程。
+</p>
+<!-- Tidy found serious XHTML errors -->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:504071-0!1!0!!zh!2!zh and timestamp 20230310125604 -->
+<div class="printfooter">
+来自"<a href="https://wiki.mbalib.com/wiki/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86">https://wiki.mbalib.com/wiki/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86</a>"</div>
+
+      </div>
+	    	  <div id="recommend-bar" class="visualClear">
+          <div class="clearfix">
+		<div class="vote1" id="recommend" onclick="return articlevote('第一性原理')" onmouseover="this.className='vote2'" onmouseout="this.className='vote1'"><span id="vote-text">本条目对我有帮助</span><b id="vote-link" data-count="1972">1,972</b></div>		<div class="ds-btn-lay" style="font-size:0;float:left;">
+                <span class="btn-seperate" style="margin-left:20px"></span>
+                <a class="wiki-btn btn1" id="c_reward" data-subject="MBA智库百科打赏" data-user="113.91.89.146" data-channel="wiki" data-aid="第一性原理" data-title="第一性原理">赏</a>
+                <div id="rqCodeBtn" style="position:relative;display: inline-block;vertical-align: middle;">
+                    <a target="_blank" href="//www.mbalib.com/apps/mbalib/?from_source=wiki_btn" class="wiki-btn btn2"><i class="iconfont icon-shouji fz-20"></i> MBA智库APP</a>
+                    <div id="appRqCode" class="rq_wr">
+                        <div class="img-wr"><img class="img" src="//img.mbalib.com/common/images/rqCode-app_v2.png"></div>
+                        <p class="text"> 扫一扫，下载MBA智库APP</p>
+                    </div>
+                </div>
+            </div>
+<script>
+                $(function(){
+					$("#rqCodeBtn").mouseover(function(){
+						if(!$("#appRqCode").hasClass("show")){
+							$("#appRqCode").fadeIn('fast',function(){
+								$(this).addClass("show");
+								if (typeof statWikiShowAppQrcode === 'function')
+								{
+								    statWikiShowAppQrcode();
+								}
+							});
+						}
+					}).mouseleave(function(){
+						if($("#appRqCode").hasClass("show")){
+							$("#appRqCode").fadeOut('fast',function(){
+								$(this).removeClass("show");
+							});
+						}
+					});
+					
+					function clickReward()
+				    {
+					    var url = '/wiki?action=ajax&rs=wfClearRewardCache&rsargs={"title":"第一性原理"}';
+					    $.post(url,{},function(){});
+				    }
+				});
+			</script>		          </div>
+		<div id="share"><span class="title" style="float:left">分享到：</span>
+			<div class="bdsharebuttonbox bdshare-button-style0-24" data-tag="share_1" data-bd-bind="1678516614617">
+			<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+			<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+			<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+			<!-- <a href="#" class="bds_qzone" data-cmd="qzone"></a> -->
+			<!-- <a href="#" class="bds_renren" data-cmd="renren"></a> -->
+			<!-- <a href="#" class="bds_more" data-cmd="more"></a> -->
+			</div>
+		</div>
+		<script>
+            (function(){
+                $("#share").click(function(){
+                    if(typeof statWikiShare === 'function')
+                    {
+                        statWikiShare(wgPageName);
+                    }
+                })
+            })();
+		</script>
+	</div>
+	  	   <div class="unfold-field unfold-field-download">
+           <!-- <div class="unflod-field-arrow show_all"></div> -->
+           <a href="javascript:void(0)" class="download-text download_app" data-type="page">打开App</a>
+      </div>
+      
+        
+        <div class="bg hid" id="box-app-tip"></div>
+        <div class="box-app-tip" id="down-app-pop" style="display:none">
+            <h6 class="title">温馨提示</h6>
+            <a href="javascript:void(0)" class="closeBtn" onclick="closeAppTip()"></a>
+            <p class="text">复制该内容请前往MBA智库App</p>
+            <a href="javascript:void(0)" class="lineBtn primary" onclick="downAppLink()">立即前往App</a>
+        </div>
+
+
+        <script>
+
+            if(!wfIsPC()) {
+                //安卓系统baidu app 不可打开APP
+                if(navigator.userAgent.toLowerCase().indexOf("baiduboxapp") < 0 || navigator.userAgent.toLowerCase().indexOf("iPhone") > 0) {
+
+                    //微信外
+                    if (navigator.userAgent.toLowerCase().indexOf("micromessenger") < 0) {
+
+                        var touchTime = 0;
+
+                        $("#globalWrapper").on('touchstart', '#content', function (e) {
+                            e.stopPropagation();
+                            touchTime = setTimeout(function () {
+                                downloadPage();
+                            }, 700);//这里设置长按响应时间
+                        });
+
+                        $("#globalWrapper").on('touchend', '#content', function (e) {
+                            e.stopPropagation();
+                            clearTimeout(touchTime);
+                        });
+
+                    } else {
+                        $(document).on('copy', function (e) {
+                            var txt;
+                            if (document.selection) {
+                                txt = document.selection.createRange().text
+                            } else {
+                                txt = window.getSelection() + '';
+                            }
+                            //光标是不是选中了一个有内容的片段
+                            if (txt) {
+                                downloadPage();
+                            }
+                            let s = getSelection();
+                            s.setBaseAndExtent(s.focusNode, 0, s.focusNode, 0);
+                        });
+                    }
+                }
+            }
+
+            function downloadPage()
+            {
+                var url = "https://passport.mbalib.com/api2/SetDownloadPage";
+                $.post(url, {type: "wiki_article", key: "第一性原理"}, function (result) {
+
+                }, 'json');
+                openAppTip();
+            }
+
+            function closeAppTip(){
+                $("#box-app-tip").addClass("hid");
+                $("#down-app-pop").fadeOut('fast');
+            }
+
+            function openAppTip(){
+                $("#box-app-tip").removeClass("hid");
+                $("#down-app-pop").fadeIn('fast');
+            }
+
+
+            function downAppLink(){
+                if(!wfIsPC()) {
+                    download_app("copy");
+                }
+            }
+
+        </script>
+    
+<div id="ad-related" class="visualClear">
+<!-- 广告位：WIKI-04 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2403007',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script><div id="_8aungk7oft5"></div><script charset="utf-8" src="https://pos.baidu.com/xckm?di=2403007&amp;uuid=4cd6f1e502df1218&amp;dri=0&amp;dis=0&amp;dai=0&amp;ps=1289x1764&amp;enu=encoding&amp;exps=110011&amp;ant=0&amp;psi=f47195928fac4fb4&amp;dcb=___adblockplus_&amp;dtm=SSP_JSONP&amp;dvi=0.0&amp;dci=-1&amp;dpt=none&amp;tpr=1678516607765&amp;ti=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%20-%20MBA%E6%99%BA%E5%BA%93%E7%99%BE%E7%A7%91&amp;ari=2&amp;ver=0308&amp;dbv=2&amp;drs=1&amp;pcs=1784x949&amp;pss=1784x1408&amp;cfv=0&amp;cpl=5&amp;chi=1&amp;cce=true&amp;cec=UTF-8&amp;tlm=1655024964&amp;prot=2&amp;rw=949&amp;ltu=https%3A%2F%2Fwiki.mbalib.com%2Fwiki%2F%25E7%25AC%25AC%25E4%25B8%2580%25E6%2580%25A7%25E5%258E%259F%25E7%2590%2586&amp;ltr=https%3A%2F%2Fwww.google.com.hk%2F&amp;lcr=https%3A%2F%2Fwww.google.com.hk%2F&amp;ecd=1&amp;dft=0&amp;uc=1792x1060&amp;pis=-1x-1&amp;sr=1792x1120&amp;tcn=1678516609"></script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- NEWS-03 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8234842646771010" data-ad-slot="9037311817" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_0_host" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8234842646771010&amp;output=html&amp;h=250&amp;slotname=9037311817&amp;adk=2967696910&amp;adf=2565641774&amp;pi=t.ma~as.9037311817&amp;w=300&amp;lmt=1655024964&amp;format=300x250&amp;url=https%3A%2F%2Fwiki.mbalib.com%2Fwiki%2F%25E7%25AC%25AC%25E4%25B8%2580%25E6%2580%25A7%25E5%258E%259F%25E7%2590%2586&amp;wgl=1&amp;adsid=ChAIgMeroAYQt8ia-v7ixL4hEj0AYOiMbmSRCnz9Ivy5I-cJJW4igBE_1qSQRzD3rVwpQ8IF4Ohh_NGx7Z_f9bFn3GW8F8jjpsOdP66hFT9M&amp;uach=WyJtYWNPUyIsIjEzLjIuMSIsIng4NiIsIiIsIjExMC4wLjU0ODEuMTc3IixbXSxmYWxzZSxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMTAuMC41NDgxLjE3NyJdLFsiTm90IEEoQnJhbmQiLCIyNC4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjExMC4wLjU0ODEuMTc3Il1dLGZhbHNlXQ..&amp;dt=1678516610936&amp;bpp=18&amp;bdt=5048&amp;idt=2275&amp;shv=r20230308&amp;mjsv=m202303010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Dbb72ccccea236ebd-22dfb6e4bbde00d7%3AT%3D1678516613%3ART%3D1678516613%3AS%3DALNI_MZxjAqI92UM-0b4VskvP0knPM_z5Q&amp;gpic=UID%3D000009dffb7ecd9e%3AT%3D1678516613%3ART%3D1678516613%3AS%3DALNI_MaQqilv6TtQbREi3n1-sE_mlD8MWg&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=1853153735858&amp;frm=20&amp;pv=1&amp;ga_vid=1276387049.1678516614&amp;ga_sid=1678516614&amp;ga_hid=1378182755&amp;ga_fc=0&amp;u_tz=480&amp;u_his=1&amp;u_h=1120&amp;u_w=1792&amp;u_ah=1060&amp;u_aw=1792&amp;u_cd=30&amp;u_sd=2&amp;dmc=8&amp;adx=1468&amp;ady=1324&amp;biw=1788&amp;bih=949&amp;scr_x=0&amp;scr_y=0&amp;eid=44777876%2C44759842%2C44759875%2C44759926%2C31072788%2C31072954%2C44774292%2C31067146%2C31067147%2C31067148%2C31068556&amp;oid=2&amp;pvsid=2658216441323453&amp;tmod=632178255&amp;uas=0&amp;nvt=1&amp;topics=ARTwLgIEAlO2z1ZmfUnFYyw57xz2jT6DHI38Qw_NjlXocamCvGOK_LdSI3bAZihRUSlMC4RRwgeayxrQvv3kitkQCvJyT9mm4VCNU0OhWfyphResbQylQNWjQJ9tojmpS4aiRNYn776sXrPL72XVAtwqebOpiqs_nqry8JlUBVueThIoHnABG9_-qwFwhe-996XS5Bxk5iTk9XjfYrTRBMbBG95SUdQCJxn5ihbkEVqZqD2a6cnhTsQSroPEe5oDRIrE7ilStwbbo1qc33v0RhZNEMUkF8qdkZM_HylLGQ8y_yuik2ANDS4ql6FgD7KJ72VN84hp2jFfCcyFT0LMUFxOehtrjbo1EArbmwyXAO5MzJQ.&amp;ref=https%3A%2F%2Fwww.google.com.hk%2F&amp;fc=896&amp;brdim=0%2C25%2C0%2C25%2C1792%2C25%2C1792%2C1060%2C1792%2C949&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=0&amp;bc=31&amp;jar=2023-03-11-06&amp;td=1&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=m05lcwSPec&amp;p=https%3A//wiki.mbalib.com&amp;dtd=80606" data-google-container-id="a!1" data-google-query-id="COOSv_mh0_0CFTeP2AUdOH8O4A" data-load-complete="true"></iframe></div></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+	    	   <div id="editnotice" class="visualClear"> &nbsp;&nbsp;<font size="-1" color="#999999">如果您认为本条目还有待完善，需要补充新内容或修改错误内容，请<a href="https://wiki.mbalib.com/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=edit"><b>编辑条目</b></a>或<a href="javascript:void(0)" onclick="feedbackPop.open()"><b>投诉举报</b></a></font>。</div> 	   		
+	   <div id="related-documents" class="visualClear">
+		<h2>本条目相关文档</h2>
+<ul><li><span title="pdf" class="pdf filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/3ade8c6345377a72b6851a64f525c312.html">B2B营销的第一性原理</a> <font size="-1">1页</font></li><li><span title="ppt" class="ppt filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/048191c7f1ea2580e1b8bb8d9b245693.html">【精品文档】第一性原理.pptx</a> <font size="-1">12页</font></li><li><span title="doc" class="doc filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/390230a7ac64f89b8cc5b1127741b42a.html">从产品本质到产品价值：谈谈「第一性原理」与「互联网产品」</a> <font size="-1">3页</font></li><li><span title="doc" class="doc filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/be01fa9f896e12f5763f5cd05fe4c86e.html">森林群落第一性生产力的测定与分析</a> <font size="-1">7页</font></li><li><span title="pdf" class="pdf filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/d2ec3c12c4eee6bf198229ba0c5ace21.html">第一性原理研究Si(111)面外延ZnSe异质界面原子的结合与成键</a> <font size="-1">5页</font></li><li><span title="doc" class="doc filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/76f765a8e8ba2a7b26dd9d6a2b563451.html">（生产管理知识）森林群落第一性生产力的测定与分析</a> <font size="-1">9页</font></li><li><span title="pdf" class="pdf filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/9580415196fdcc3c9a4912ee1fd77c78.html">铁基超导体结构丶磁有序及其与超导电性关联性的第一性原理计算研究</a> <font size="-1">118页</font></li><li><span title="pdf" class="pdf filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/8c287174d812f39896971d0442550364.html">广西黄冕林场次生常绿阔叶林生物量及净第一性生产力</a> <font size="-1">5页</font></li><li><span title="ppt" class="ppt filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/bba9bfc241ee839654f98043b83316dd.html">通信原理第一章</a> <font size="-1">47页</font></li><li><span title="ppt" class="ppt filetype">&nbsp;</span><a class="doc_url" target="_blank" href="https://doc.mbalib.com/view/98b87a908a3b0e4e08745763ead089c5.html">第一章风险原理</a> <font size="-1">50页</font></li></ul>			<script>
+			$(".doc_url").click(function(){
+				if(typeof stateWikiDocVisit === "function")
+				{
+			   		stateWikiDocVisit();
+				}
+			});
+			</script><a id="search-documents-url" href="https://doc.mbalib.com/search?q=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86" target="_blank">更多相关文档</a></div>
+                <link rel="stylesheet" href="https://img.mbalib.com/common/common.css">
+        <div class="ke-lay ke-lay-in-wiki" style="" id="ke-lay-in-wiki">
+            <h2 class="title">本条目相关课程</h2>
+            <div id="ke-list"> <div class="lesson-lay">   <a class="ke-image" href="https://ke.mbalib.com/#/column/49?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><img class="lazyload" data-original="https://imgw.mbalib.com/ketang/uploads/thumb/column/b/b5/b54033de42b7e0835c6aa79c675e51da.png/360px-b54033de42b7e0835c6aa79c675e51da.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">  </a> <div class="lesson-r-box"><a href="https://ke.mbalib.com/#/column/49?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><h6 class="tit">金字塔原理，职场制胜思维武器</h6></a>  <div class="teacher">武涛</div> <div class="bottom"><div> <i class="vip-ico"></i> <span class="fc-red-price">¥<i>45.44</i></span> <span class="oPrice">¥<i>56.80</i></span> </div></div></div></div> <div class="lesson-lay">   <a class="ke-image" href="https://ke.mbalib.com/#/column/129?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><img class="lazyload" data-original="https://imgw.mbalib.com/ketang/uploads/thumb/column/f/f3/f344e867e74498849515571966d9dec4.jpg/360px-f344e867e74498849515571966d9dec4.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">  </a> <div class="lesson-r-box"><a href="https://ke.mbalib.com/#/column/129?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><h6 class="tit">品牌和营销：从入门到精通</h6></a>  <div class="teacher">李婷</div> <div class="bottom"><div> <i class="vip-ico"></i> <span class="fc-red-price">¥<i>79.92</i></span> <span class="oPrice">¥<i>99.90</i></span> </div></div></div></div> <div class="lesson-lay">   <a class="ke-image" href="https://ke.mbalib.com/#/column/376?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><img class="lazyload" data-original="https://imgw.mbalib.com/ketang/uploads/thumb/column/a/a7/a723c37d25c1a41718ec9fd0a6f35b99.jpg/360px-a723c37d25c1a41718ec9fd0a6f35b99.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">  </a> <div class="lesson-r-box"><a href="https://ke.mbalib.com/#/column/376?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><h6 class="tit">理财经理必修课：个人理财与家庭理财的基础</h6></a>  <div class="teacher">梅亚欧</div> <div class="bottom"><div> <i class="vip-ico"></i> <span class="fc-red-price">¥<i>0.00</i></span> <span class="oPrice">¥<i>159.00</i></span> </div></div></div></div> <div class="lesson-lay">   <a class="ke-image" href="https://ke.mbalib.com/#/column/74?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><img class="lazyload" data-original="https://imgw.mbalib.com/ketang/uploads/thumb/column/a/a8/a843f229e19af1c034ce98566859f682.jpg/360px-a843f229e19af1c034ce98566859f682.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">  </a> <div class="lesson-r-box"><a href="https://ke.mbalib.com/#/column/74?from_source=wiki_relate_course" onclick="statRelateCourseBottom('wiki')" target="_blank"><h6 class="tit">有趣的商业分析：听得懂，才能玩得转</h6></a>  <div class="teacher">老光</div> <div class="bottom"><div> <i class="vip-ico"></i> <span class="fc-red-price">¥<i>79.20</i></span> <span class="oPrice">¥<i>99.00</i></span> </div></div></div></div></div>
+        </div>
+
+        <script>
+            $(function() {
+                var key = "第一性原理";
+                $.ajax({
+                    type: 'post',
+                    url:  'https://www.mbalib.com/appwiki/hotSearch',
+                    data: {'keyword': key , 'type': 2,"num":4},
+                    dataType: 'json',
+                }).done(function (result) {
+                    var data = result.data.ke;
+                    if (data && data.length > 0) {
+                        //底部
+                        var handleList1 = function (ke) {
+                            var price = handlePrice(ke);
+                            var html = '';
+                            html += ' <div class="lesson-lay">   ' +
+                                '<a class="ke-image" href="'+ke.url+'?from_source=wiki_relate_course" onclick="statRelateCourseBottom(\'wiki\')" target="_blank">' +
+                                '<img class="lazyload"  data-original="' + ke.thumb_logo + '"/> ' +
+                                ( ke.recommend==1?' <span class="tab-ico2"></span>':'')  +  ( ke.coupon_img?' <span class="tab-ico"></span>':'')  +
+                                ' </a> ' +
+                                '<div class="lesson-r-box">' +
+                                '<a href="'+ke.url+'?from_source=wiki_relate_course" onclick="statRelateCourseBottom(\'wiki\')" target="_blank" >' +
+                                '<h6 class="tit" >' + ke.title + '</h6>' +
+                                '</a> ' +
+                                 ' <div class="teacher" >' + (ke.teacher?ke.teacher.name:'') + '</div>' +
+                                ' <div class="bottom">' + price + '</div>'+
+                                '</div>'+
+                                '</div>';
+                            //console.log(html);
+                            return html;
+                        }
+
+
+                       function handlePrice(ke){
+							var price = '<div>';
+							if (ke.vip_price) {
+								price += ' <i class="vip-ico"></i>' +
+									(ke.vip_price == '0.00' || ke.vip_price == '0' ? ' <span  class="fc-red-price">&yen;<i>0.00</i></span>' : ' <span class="fc-red-price">&yen;<i>' + ke.vip_price + '</i></span>') +
+									' <span class="oPrice">&yen;<i>' + ke.price + '</i></span>';
+							} else if (ke.exist_coupon) {
+								price +=
+									(ke.price == '0.00' || ke.price == '0' ? ' <span><i class="fc-red-price free">免费</i></span>' : ' <span class="fc-red-price" >&yen;<i>' + ke.price + '</i></span>') +
+									' <span class="oPrice">&yen;<i>' + ke.original_price + '</i></span>';
+							} else {
+								price += (ke.price == '0.00' || ke.price == '0' ? ' <span><i class="fc-red-price free">免费</i></span>' : ' <span class="fc-blue-price" >&yen;<i>' + ke.price + '</i></span>' );
+							}
+							price += ' </div>';
+							return price;
+						}
+                    
+
+                        var html = '';
+                        for (var i = 0; i < data.length; i++) {
+                            html += handleList1(data[i]);
+   
+                        }
+
+                        //底部
+                        $("#ke-list").html(html).parent().show();
+                        
+                       
+                        $("img.lazyload").lazyload();
+                     
+                    }else{
+                    }
+                }).fail(function () {
+                });
+
+            })
+        </script>
+        
+            <div id="Contributors"><h2>本条目由以下用户参与贡献</h2>
+		<a href="/wiki/User:Laiqinjing" title="User:Laiqinjing">Mis铭</a>,<a href="/w/index.php?title=User:M_id_6ff9831e0c3a21e2588ec9d437c29b5f&amp;action=edit" class="new" title="User:M id 6ff9831e0c3a21e2588ec9d437c29b5f">Lpz</a>,<a href="/w/index.php?title=User:M_id_8e9f08fd65b90393ca6f8a1ecb0244a1&amp;action=edit" class="new" title="User:M id 8e9f08fd65b90393ca6f8a1ecb0244a1">Vin</a>.</div>	    <div id="catlinks"><p class="catlinks"><a href="/w/index.php?title=Special:Categories&amp;article=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86" title="Special:Categories">页面分类</a>: <span dir="ltr"><a href="/wiki/Category:%E6%80%9D%E7%BB%B4%E6%96%B9%E5%BC%8F" title="Category:思维方式">思维方式</a></span></p></div>	    <!-- end content -->
+	    <div class="visualClear">
+	   
+<div id="ad-comment">
+<!-- 广告位：WIKI-06 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '224685',
+        container: s,
+        size: '728,90',
+        display: 'inlay-fix'
+    });
+})();
+</script><div id="_t2eyp71kbzb"></div><script charset="utf-8" src="https://pos.baidu.com/xckm?di=224685&amp;uuid=bdd8a36c604bd1d7&amp;dri=0&amp;dis=0&amp;dai=0&amp;ps=1913x260&amp;enu=encoding&amp;exps=110011&amp;ant=0&amp;psi=f47195928fac4fb4&amp;dcb=___adblockplus_&amp;dtm=SSP_JSONP&amp;dvi=0.0&amp;dci=-1&amp;dpt=none&amp;tpr=1678516607765&amp;ti=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%20-%20MBA%E6%99%BA%E5%BA%93%E7%99%BE%E7%A7%91&amp;ari=2&amp;ver=0308&amp;dbv=2&amp;drs=1&amp;pcs=1784x949&amp;pss=1784x1923&amp;cfv=0&amp;cpl=5&amp;chi=1&amp;cce=true&amp;cec=UTF-8&amp;tlm=1655024964&amp;prot=2&amp;rw=949&amp;ltu=https%3A%2F%2Fwiki.mbalib.com%2Fwiki%2F%25E7%25AC%25AC%25E4%25B8%2580%25E6%2580%25A7%25E5%258E%259F%25E7%2590%2586&amp;ltr=https%3A%2F%2Fwww.google.com.hk%2F&amp;lcr=https%3A%2F%2Fwww.google.com.hk%2F&amp;ecd=1&amp;dft=0&amp;uc=1792x1060&amp;pis=-1x-1&amp;sr=1792x1120&amp;tcn=1678516609"></script>
+</div>
+
+		<a id="comment"></a><h2>评论(共24条)</h2><center><font size="-1" color="#999999">提示:评论内容为网友针对条目"<b>第一性原理</b>"展开的讨论，与本站观点立场无关。</font></center><a id="c139497"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_9c02e0db473a1d78198dc9feea37af98&amp;action=edit" class="new" title="User:M id 9c02e0db473a1d78198dc9feea37af98">M id 9c02e0db473a1d78198dc9feea37af98</a> (<a href="/w/index.php?title=User_talk:M_id_9c02e0db473a1d78198dc9feea37af98&amp;action=edit" class="new" title="User talk:M id 9c02e0db473a1d78198dc9feea37af98">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+9c02e0db473a1d78198dc9feea37af98" title="Special:Contributions">贡献</a>) 在 2020年1月1日 11:47  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment139497">  
+					<p>学到了。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-139497').style.display ? '' : 'none'; document.getElementById('reply-139497').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-139497" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="139497">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(323980736)"></textarea><br>
+				<div id="yzm-323980736"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c139514"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_9c02e0db473a1d78198dc9feea37af98&amp;action=edit" class="new" title="User:M id 9c02e0db473a1d78198dc9feea37af98">M id 9c02e0db473a1d78198dc9feea37af98</a> (<a href="/w/index.php?title=User_talk:M_id_9c02e0db473a1d78198dc9feea37af98&amp;action=edit" class="new" title="User talk:M id 9c02e0db473a1d78198dc9feea37af98">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+9c02e0db473a1d78198dc9feea37af98" title="Special:Contributions">贡献</a>) 在 2020年1月3日 22:42  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment139514">  
+					<p>归回概念，在思考怎么做之前，先想想为什么要做和做什么。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-139514').style.display ? '' : 'none'; document.getElementById('reply-139514').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-139514" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="139514">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1717091155)"></textarea><br>
+				<div id="yzm-1717091155"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c139855"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User:M id ddba5851b71ab00ac065c2934be9fc65">M id ddba5851b71ab00ac065c2934be9fc65</a> (<a href="/w/index.php?title=User_talk:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User talk:M id ddba5851b71ab00ac065c2934be9fc65">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+ddba5851b71ab00ac065c2934be9fc65" title="Special:Contributions">贡献</a>) 在 2020年2月21日 17:52  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment139855">  
+					<p>两处写 马斯克 的姓  不一样
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-139855').style.display ? '' : 'none'; document.getElementById('reply-139855').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-139855" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="139855">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(769731951)"></textarea><br>
+				<div id="yzm-769731951"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c139859"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_5007a68de65120643182549c67b4719b&amp;action=edit" class="new" title="User:M id 5007a68de65120643182549c67b4719b">M id 5007a68de65120643182549c67b4719b</a> (<a href="/w/index.php?title=User_talk:M_id_5007a68de65120643182549c67b4719b&amp;action=edit" class="new" title="User talk:M id 5007a68de65120643182549c67b4719b">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+5007a68de65120643182549c67b4719b" title="Special:Contributions">贡献</a>) 在 2020年2月22日 08:25  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> <a href="/w/index.php?title=User:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User:M id ddba5851b71ab00ac065c2934be9fc65">M id ddba5851b71ab00ac065c2934be9fc65</a> (<a href="/w/index.php?title=User_talk:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User talk:M id ddba5851b71ab00ac065c2934be9fc65">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+ddba5851b71ab00ac065c2934be9fc65" title="Special:Contributions">贡献</a>) 在 2020年2月21日 17:52  发表</div>
+					<div class="comment-body" id="reply-comment-139855">  
+					<p>两处写 马斯克 的姓  不一样
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment139859">  
+					<p>都是同一个人，翻译不同
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-139859').style.display ? '' : 'none'; document.getElementById('reply-139859').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-139859" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="139859">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(104652675)"></textarea><br>
+				<div id="yzm-104652675"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c140679"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 106.75.220.*  在 2020年5月13日 14:41  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> <a href="/w/index.php?title=User:M_id_5007a68de65120643182549c67b4719b&amp;action=edit" class="new" title="User:M id 5007a68de65120643182549c67b4719b">M id 5007a68de65120643182549c67b4719b</a> (<a href="/w/index.php?title=User_talk:M_id_5007a68de65120643182549c67b4719b&amp;action=edit" class="new" title="User talk:M id 5007a68de65120643182549c67b4719b">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+5007a68de65120643182549c67b4719b" title="Special:Contributions">贡献</a>) 在 2020年2月22日 08:25  发表</div>
+					<div class="comment-body" id="reply-comment-139859">  
+					<p>都是同一个人，翻译不同
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment140679">  
+					<p>同一篇文章 不应该不一样
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-140679').style.display ? '' : 'none'; document.getElementById('reply-140679').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-140679" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="140679">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(241842206)"></textarea><br>
+				<div id="yzm-241842206"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c140932"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_e1cca02e80e43a8c13bbcf67ca002592&amp;action=edit" class="new" title="User:M id e1cca02e80e43a8c13bbcf67ca002592">170****8007</a> (<a href="/w/index.php?title=User_talk:170%2A%2A%2A%2A8007&amp;action=edit" class="new" title="User talk:170****8007">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=170%2A%2A%2A%2A8007" title="Special:Contributions">贡献</a>) 在 2020年6月14日 12:22  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment140932">  
+					<p>实际上就是原理思维，或者又叫元思维的方式。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-140932').style.display ? '' : 'none'; document.getElementById('reply-140932').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-140932" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="140932">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(584236120)"></textarea><br>
+				<div id="yzm-584236120"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c142523"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 119.86.38.*  在 2020年12月14日 16:25  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> <a href="/w/index.php?title=User:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User:M id ddba5851b71ab00ac065c2934be9fc65">M id ddba5851b71ab00ac065c2934be9fc65</a> (<a href="/w/index.php?title=User_talk:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User talk:M id ddba5851b71ab00ac065c2934be9fc65">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+ddba5851b71ab00ac065c2934be9fc65" title="Special:Contributions">贡献</a>) 在 2020年2月21日 17:52  发表</div>
+					<div class="comment-body" id="reply-comment-139855">  
+					<p>两处写 马斯克 的姓  不一样
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment142523">  
+					<p>我一般翻译成 埃隆.马斯克
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-142523').style.display ? '' : 'none'; document.getElementById('reply-142523').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-142523" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="142523">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(227236698)"></textarea><br>
+				<div id="yzm-227236698"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c142805"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_617fb40f21a379522047bac3c928ba16&amp;action=edit" class="new" title="User:M id 617fb40f21a379522047bac3c928ba16">M id 617fb40f21a379522047bac3c928ba16</a> (<a href="/w/index.php?title=User_talk:M_id_617fb40f21a379522047bac3c928ba16&amp;action=edit" class="new" title="User talk:M id 617fb40f21a379522047bac3c928ba16">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+617fb40f21a379522047bac3c928ba16" title="Special:Contributions">贡献</a>) 在 2021年1月21日 19:50  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment142805">  
+					<p>主席理论，解决主要矛盾
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-142805').style.display ? '' : 'none'; document.getElementById('reply-142805').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-142805" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="142805">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1670066204)"></textarea><br>
+				<div id="yzm-1670066204"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c142927"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 218.68.181.*  在 2021年2月15日 16:34  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment142927">  
+					<p>化繁为简，追求本质
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-142927').style.display ? '' : 'none'; document.getElementById('reply-142927').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-142927" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="142927">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1872721433)"></textarea><br>
+				<div id="yzm-1872721433"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c142944"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 220.191.253.*  在 2021年2月18日 11:23  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment142944">  
+					<p>从本源出发思考
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-142944').style.display ? '' : 'none'; document.getElementById('reply-142944').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-142944" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="142944">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(177399580)"></textarea><br>
+				<div id="yzm-177399580"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c142960"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 124.156.136.*  在 2021年2月21日 21:18  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> <a href="/w/index.php?title=User:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User:M id ddba5851b71ab00ac065c2934be9fc65">M id ddba5851b71ab00ac065c2934be9fc65</a> (<a href="/w/index.php?title=User_talk:M_id_ddba5851b71ab00ac065c2934be9fc65&amp;action=edit" class="new" title="User talk:M id ddba5851b71ab00ac065c2934be9fc65">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+ddba5851b71ab00ac065c2934be9fc65" title="Special:Contributions">贡献</a>) 在 2020年2月21日 17:52  发表</div>
+					<div class="comment-body" id="reply-comment-139855">  
+					<p>两处写 马斯克 的姓  不一样
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment142960">  
+					<p>是名字不一样吧
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-142960').style.display ? '' : 'none'; document.getElementById('reply-142960').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-142960" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="142960">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1035580458)"></textarea><br>
+				<div id="yzm-1035580458"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c143292"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 101.191.69.*  在 2021年4月7日 17:54  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment143292">  
+					<p>如何用第一性原理研究经济学？
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-143292').style.display ? '' : 'none'; document.getElementById('reply-143292').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-143292" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="143292">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(895536156)"></textarea><br>
+				<div id="yzm-895536156"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c143631"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_45e90fa588eeb7f4d50a710102cba7e8&amp;action=edit" class="new" title="User:M id 45e90fa588eeb7f4d50a710102cba7e8">M id 45e90fa588eeb7f4d50a710102cba7e8</a> (<a href="/w/index.php?title=User_talk:M_id_45e90fa588eeb7f4d50a710102cba7e8&amp;action=edit" class="new" title="User talk:M id 45e90fa588eeb7f4d50a710102cba7e8">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+45e90fa588eeb7f4d50a710102cba7e8" title="Special:Contributions">贡献</a>) 在 2021年5月29日 22:14  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment143631">  
+					<p>一切存在的必将是应该存在的
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-143631').style.display ? '' : 'none'; document.getElementById('reply-143631').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-143631" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="143631">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1790168082)"></textarea><br>
+				<div id="yzm-1790168082"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c143910"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 218.57.98.*  在 2021年7月5日 09:38  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment143910">  
+					<p>帮助不大 右转哲学病
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-143910').style.display ? '' : 'none'; document.getElementById('reply-143910').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-143910" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="143910">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1819017434)"></textarea><br>
+				<div id="yzm-1819017434"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c144072"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_681f15291fba98511e8620e1695763e8&amp;action=edit" class="new" title="User:M id 681f15291fba98511e8620e1695763e8">M id 681f15291fba98511e8620e1695763e8</a> (<a href="/w/index.php?title=User_talk:M_id_681f15291fba98511e8620e1695763e8&amp;action=edit" class="new" title="User talk:M id 681f15291fba98511e8620e1695763e8">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+681f15291fba98511e8620e1695763e8" title="Special:Contributions">贡献</a>) 在 2021年7月30日 11:42  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment144072">  
+					<p>和中国道家思想类似，道生一，一生二，二生三，三生万物。
+我们的文化也很有内涵的 ，嘻嘻
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-144072').style.display ? '' : 'none'; document.getElementById('reply-144072').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-144072" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="144072">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1692355887)"></textarea><br>
+				<div id="yzm-1692355887"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c144318"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 106.39.148.*  在 2021年9月9日 12:57  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment144318">  
+					<p>cool
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-144318').style.display ? '' : 'none'; document.getElementById('reply-144318').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-144318" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="144318">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(235589364)"></textarea><br>
+				<div id="yzm-235589364"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c144527"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 218.75.67.*  在 2021年10月11日 11:28  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment144527">  
+					<p>寻找事物存在的本元，也就能很快的找到问题的解决办法。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-144527').style.display ? '' : 'none'; document.getElementById('reply-144527').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-144527" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="144527">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1270514390)"></textarea><br>
+				<div id="yzm-1270514390"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c144918"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 39.130.54.*  在 2021年11月29日 22:24  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment144918">  
+					<p>这个锂电池的例子有点搞笑了，你直接购买电池，别人不要利润的吗？你自己造节省30%不是很正常的事情？用量大，当然是自己投资建厂造电池，用量小，你还投资就是有问题了。这个例子恰好怎么了讲解的人自己都没搞明白什么是“第一性原理”。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-144918').style.display ? '' : 'none'; document.getElementById('reply-144918').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-144918" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="144918">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(2114308829)"></textarea><br>
+				<div id="yzm-2114308829"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c144920"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/wiki/User:M_id_9cbdfc1529f0a55b2d260963af484f98" title="User:M id 9cbdfc1529f0a55b2d260963af484f98">陈cc</a> (<a href="/w/index.php?title=User_talk:%E9%99%88cc&amp;action=edit" class="new" title="User talk:陈cc">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=%E9%99%88cc" title="Special:Contributions">贡献</a>) 在 2021年11月30日 09:28  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> 39.130.54.*  在 2021年11月29日 22:24  发表</div>
+					<div class="comment-body" id="reply-comment-144918">  
+					<p>这个锂电池的例子有点搞笑了，你直接购买电池，别人不要利润的吗？你自己造节省30%不是很正常的事情？用量大，当然是自己投资建厂造电池，用量小，你还投资就是有问题了。这个例子恰好怎么了讲解的人自己都没搞明白什么是“第一性原理”。
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment144920">  
+					<p>第一性原理由马斯克推广普及。该案例来自于马斯克TED采访本人口述。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-144920').style.display ? '' : 'none'; document.getElementById('reply-144920').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-144920" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="144920">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1099233988)"></textarea><br>
+				<div id="yzm-1099233988"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c144946"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 117.158.220.*  在 2021年12月3日 17:59  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> 101.191.69.*  在 2021年4月7日 17:54  发表</div>
+					<div class="comment-body" id="reply-comment-143292">  
+					<p>如何用第一性原理研究经济学？
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment144946">  
+					<p>价格围绕价值波动
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-144946').style.display ? '' : 'none'; document.getElementById('reply-144946').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-144946" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="144946">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1988992700)"></textarea><br>
+				<div id="yzm-1988992700"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c145201"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 223.71.139.*  在 2022年1月10日 16:49  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment145201">  
+					<p>我一般叫 翼龙马斯克
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-145201').style.display ? '' : 'none'; document.getElementById('reply-145201').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-145201" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="145201">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(415603041)"></textarea><br>
+				<div id="yzm-415603041"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c145632"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:M_id_3082e4935ff55bf86b6dfe7ec6e5f7d9&amp;action=edit" class="new" title="User:M id 3082e4935ff55bf86b6dfe7ec6e5f7d9">云讯坤叔</a> (<a href="/w/index.php?title=User_talk:%E4%BA%91%E8%AE%AF%E5%9D%A4%E5%8F%94&amp;action=edit" class="new" title="User talk:云讯坤叔">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=%E4%BA%91%E8%AE%AF%E5%9D%A4%E5%8F%94" title="Special:Contributions">贡献</a>) 在 2022年3月29日 14:16  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment145632">  
+					<p>第一性原理在经济学上的应用就是回归到生存与物质交换。
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-145632').style.display ? '' : 'none'; document.getElementById('reply-145632').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-145632" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="145632">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(577407697)"></textarea><br>
+				<div id="yzm-577407697"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c145970"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> 36.57.130.*  在 2022年5月25日 16:46  发表   </div>
+				<div class="comment-parent"><br>
+				<div class="comment-wrap">  
+					<div class="comment-head"> <a href="/w/index.php?title=User:M_id_9c02e0db473a1d78198dc9feea37af98&amp;action=edit" class="new" title="User:M id 9c02e0db473a1d78198dc9feea37af98">M id 9c02e0db473a1d78198dc9feea37af98</a> (<a href="/w/index.php?title=User_talk:M_id_9c02e0db473a1d78198dc9feea37af98&amp;action=edit" class="new" title="User talk:M id 9c02e0db473a1d78198dc9feea37af98">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=M+id+9c02e0db473a1d78198dc9feea37af98" title="Special:Contributions">贡献</a>) 在 2020年1月1日 11:47  发表</div>
+					<div class="comment-body" id="reply-comment-139497">  
+					<p>学到了。
+</p>
+					</div>
+				</div>
+				</div>
+				<div class="comment-body" id="wholecomment145970">  
+					<p>了不起
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-145970').style.display ? '' : 'none'; document.getElementById('reply-145970').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-145970" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="145970">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(703364888)"></textarea><br>
+				<div id="yzm-703364888"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<a id="c145994"></a>
+			<div class="comment-wrap">  
+				<div class="comment-head"> <a href="/w/index.php?title=User:Phenomena&amp;action=edit" class="new" title="User:Phenomena">gongjian</a> (<a href="/w/index.php?title=User_talk:gongjian&amp;action=edit" class="new" title="User talk:gongjian">Talk</a> | <a href="/w/index.php?title=Special:Contributions&amp;target=gongjian" title="Special:Contributions">贡献</a>) 在 2022年5月30日 14:20  发表   </div>
+				<div class="comment-parent"></div>
+				<div class="comment-body" id="wholecomment145994">  
+					<p>不就是基本逻辑概念戴一个漂亮的帽子吗？咱能好好普及一下逻辑课吗？
+</p>
+				</div>
+				<div class="comment-info"> 	 <a href="javascript://" onclick="var replydisplay=document.getElementById('reply-145994').style.display ? '' : 'none'; document.getElementById('reply-145994').style.display = replydisplay;">回复评论</a>  
+				    <div id="reply-145994" style="display:none;" align="left"> <a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="145994">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(968624931)"></textarea><br>
+				<div id="yzm-968624931"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>	   </div>
+			        </div>
+			</div>
+			<br>
+		<a id="submitcomment"></a><fieldset><legend>发表评论</legend><span>请文明上网，理性发言并遵守有关规定。</span><br><form action="/w/index.php?title=%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=comment" method="POST" id="commentform">	
+				<input type="hidden" name="parent" value="0">	
+				<textarea name="content" id="comment" rows="6" cols="80" onfocus="setCommentYZM(1839393041)"></textarea><br>
+				<div id="yzm-1839393041"></div><input type="submit" name="submit" value="提交评论">
+			</form>
+				</fieldset>		               </div>
+            
+      
+	  </div>
